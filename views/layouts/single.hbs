@@ -1,0 +1,24 @@
+<html>
+	{{>head}}
+	<body>
+		<div class="container">
+			<div>
+		      	<input class="form-group" id="github-login" placeholder="github" style="display: inline-block;">
+			  	<button type="button" id="github-login-button" class="btn" data-id="#github-login">Add</button>
+			</div>
+		  	<hr>
+		  	<div id="sort-attr">
+		  		Sort By : 
+		  		<span id = "by-name" >Name</span>
+		  		<span id = "by-location">Location</span>
+		  		<span id = "by-followers">Followers</span>
+		  	</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					{{{ body }}}
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="/javascripts/cards.js"></script>
+	</body>
+</html>
