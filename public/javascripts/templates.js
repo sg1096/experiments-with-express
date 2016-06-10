@@ -13,6 +13,6 @@ templates['card'] = template({"compiler":[7,">= 4.0.0"],"main":function(containe
     + alias4(((helper = (helper = helpers.location || (depth0 != null ? depth0.location : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"location","hash":{},"data":data}) : helper)))
     + "</span></a></div>\n			<div class=\"sub-head ellipsis\"><a><span>Followers:</span>&nbsp;"
     + alias4(((helper = (helper = helpers.followers || (depth0 != null ? depth0.followers : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"followers","hash":{},"data":data}) : helper)))
-    + "</a></div>\n		</div>\n	</div>\n</li>";
+    + "</a></div>\n		</div>\n		<span class=\"close-icon\">x</span>\n	</div>\n</li>";
 },"useData":true});
 })();

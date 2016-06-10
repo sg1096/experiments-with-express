@@ -7,6 +7,9 @@ a {
     color: #333;
 }
 
+* {
+    box-sizing: border-box;
+}
 .container {
     max-width: 1140px;
     margin: 0 auto;
@@ -30,6 +33,7 @@ a {
 .page-wrap ul li .card-wrap {
     border: 1px solid rgba(151, 151, 151, 0.5);
     border-radius: 7px;
+    position : relative;
 }
 
 .page-wrap ul li .card-wrap:hover {
@@ -41,13 +45,7 @@ a {
 .page-wrap ul li .card-wrap .img-wrap {
     height: 220px;
     width: 100%;
-}
-
-.page-wrap ul li .card-wrap .img-wrap img {
-    width: 100%;
-    height: 100%;
-    padding: 3px;
-    /* in this case image will take 100% height irrespective of image size...image can skew */
+    padding : 4px;
 }
 
 .page-wrap ul li .card-wrap .detail-wrap {
@@ -73,17 +71,45 @@ a {
     padding: 2px;
 }
 
-.form-group {
-    margin-bottom: 10px;
-    margin-right: 2px;
-    width: 13em;
-    height: 3em;
-    border: .1em solid #ddd;
+input[type="text"] {
+    margin-right: .2em;
+    font-size: 22px;
+    padding: 8px;
+    max-width: 190px;
+    border-radius: 6px;
     box-shadow: none;
-    color: #333;
-    padding: 1em;
-    border-radius: .5em;
+    border-width: 1px;
+    border: 1px solid #ddd;
 }
+
+.form-btn {
+    vertical-align: top;
+    height: 3em;
+    width: 4em;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px solid #fff;
+    color: #fff;
+    background-image: linear-gradient(#6da4dd, #447bb0);
+}
+
+.input-wrapper {
+    padding-bottom: 1em;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 12px;    `
+}
+
+.mb-12 {
+    margin-bottom: 12px;
+}
+
+img {
+    width :100%;
+    max-width:100%;
+}
+
+
+
 
 .btn {
     height: 3em;
@@ -95,4 +121,11 @@ a {
 	white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+}
+
+.close-icon {
+    position : absolute;
+    top : 10px;
+    right : 10px;
+    color : #000;
 }

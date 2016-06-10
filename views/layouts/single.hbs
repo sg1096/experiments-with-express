@@ -1,13 +1,12 @@
 <html>
 	{{>head}}
 	<body>
-		<div class="container">
-			<div>
-		      	<input class="form-group" id="github-login" placeholder="github" style="display: inline-block;">
-			  	<button type="button" id="github-login-button" class="btn" data-id="#github-login">Add</button>
+		<div>
+			<div class="input-wrapper">
+		      	<input id="github-login" placeholder="github" style="display: inline-block;" type="text">
+			  	<button type="button" id="github-login-button" class="form-btn" data-id="#github-login">Add</button>
 			</div>
-		  	<hr>
-		  	<div id="sort-attr">
+		  	<div id="sort-attr" class = "mb-12">
 		  		Sort By : 
 		  		<span id = "by-name" >Name</span>
 		  		<span id = "by-location">Location</span>
