@@ -1,71 +1,98 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+    color: #333;
 }
 
-.container{
-	max-width: 1140px;
-	margin: 0 auto;
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
 }
-.page-wrap{
-	ul{
-		padding: 0;
-		margin: 0;
-		list-style: none;
-		li{
-			display: inline-block;
-			vertical-align: top;
-			max-width: 230px;
-			width: 100%;
-			margin-right: 20px;
-			margin-bottom: 20px;
-			.card-wrap{
-				border: 1px solid rgba(151,151,151,0.5);
-				border-radius: 5px;
-				img-wrap{
-					height: 120px;
-					width: 100%;
-					img{
-						width: 100%;
-						height: 100%;  /* in this case image will take 100% height irrespective of image size...image can skew */
-					}
-				}
-				.detail-wrap{
-					background: #ffffff;
-					height: 60px;
-					padding: 20px;
-			       }				
-		       }
-	       }
-       }
+
+.page-wrap ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.page-wrap ul li {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 230px;
+    width: 100%;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.page-wrap ul li .card-wrap {
+    border: 1px solid rgba(151, 151, 151, 0.5);
+    border-radius: 7px;
+}
+
+.page-wrap ul li .card-wrap:hover {
+    border: 1px solid rgba(15, 0, 255, 0.5);
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.page-wrap ul li .card-wrap .img-wrap {
+    height: 220px;
+    width: 100%;
+}
+
+.page-wrap ul li .card-wrap .img-wrap img {
+    width: 100%;
+    height: 100%;
+    padding: 3px;
+    /* in this case image will take 100% height irrespective of image size...image can skew */
+}
+
+.page-wrap ul li .card-wrap .detail-wrap {
+    background: #ffffff;
+    height: 80px;
+    padding: 10px 10px;
+    text-align: left;
+    margin-bottom: 2.5px
+}
+
+.page-wrap ul li .card-wrap:hover .detail-wrap a {
+	color: #333;
+    border-bottom: solid 0.5px #333;
+    text-decoration: none;
+}
+
+.page-wrap ul li .card-wrap .detail-wrap .name{
+    font-size: 20px;
+    padding: 2px;
+}
+.page-wrap ul li .card-wrap .detail-wrap .sub-head{
+    font-weight: 650;
+    padding: 2px;
 }
 
 .form-group {
-	margin-bottom: 10px;
-	margin-right: 2px;
-	width: 13em;
-	height: 3em;
-	border : .1em solid #ddd;
-	box-shadow: none;
-	color : #333;
-	padding : 1em;
-	border-radius : .5em;
+    margin-bottom: 10px;
+    margin-right: 2px;
+    width: 13em;
+    height: 3em;
+    border: .1em solid #ddd;
+    box-shadow: none;
+    color: #333;
+    padding: 1em;
+    border-radius: .5em;
 }
 
 .btn {
-	height : 3em;
-	background-image: linear-gradient(#6da4dd, #447bb0);
-	color : #fff;
+    height: 3em;
+    background-image: linear-gradient(#6da4dd, #447bb0);
+    color: #fff;
 }
 
-span {
-	padding-right: 10px
+.ellipsis {
+	white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
-span:hover{
-	color : blue;
-}
-
