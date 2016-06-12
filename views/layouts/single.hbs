@@ -5,12 +5,16 @@
 			<div class="input-wrapper">
 		      	<input id="github-login" placeholder="github" style="display: inline-block;" type="text">
 			  	<button type="button" id="github-login-button" class="form-btn" data-id="#github-login">Add</button>
+			  	<span id="loading" style="display:none;">Loadin....</span>
+			  	<span id="geenric-error" style="display:none;">Error occured while fetching</span>
+			  	<span id="duplicate-id" style="display:none;">DUPLICATE ID</span>
 			</div>
+
 		  	<div id="sort-attr" class = "mb-12">
 		  		Sort By : 
-		  		<span id = "by-name" >Name</span>
-		  		<span id = "by-location">Location</span>
-		  		<span id = "by-followers">Followers</span>
+		  		<span id = "sort-by-name" >Name</span>
+		  		<span id = "sort-by-location">Location</span>
+		  		<span id = "sort-by-followers">Followers</span>
 		  	</div>
 			<div class="row">
 				<div class="col-md-12 ">

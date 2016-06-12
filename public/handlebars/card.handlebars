@@ -1,4 +1,4 @@
-<li>
+<li id="user-{{login}}">
 	<div class="card-wrap">
 		<div class="img-wrap">
 			<img src="{{imgSrc}}" alt="" />
@@ -8,6 +8,6 @@
 			<div class="sub-head ellipsis"><a><span>Location:</span>&nbsp;<span title="{{location}}">{{location}}</span></a></div>
 			<div class="sub-head ellipsis"><a><span>Followers:</span>&nbsp;{{followers}}</a></div>
 		</div>
-		<span class="close-icon">x</span>
+		<span class="close-icon" data-id="{{login}}">x</span>
 	</div>
 </li>
