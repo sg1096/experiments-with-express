@@ -134,9 +134,9 @@ var Observables = {
 };
 
 function addGitHubIdAsCard(event){
+	debugger;
 	var elem = event.currentTarget,
-		inputBoxId = $(elem).data('id'),
-		inputBox = $(inputBoxId),
+		inputBox = $('#github-login'),
 		inputBoxValue = $(inputBox).val(),
 		userData = {},
 		self = this;
@@ -213,3 +213,9 @@ $('body').delegate('#sort-by-location', 'click', Observables.sortByLocation.bind
 $('body').delegate('.close-icon', 'click', Observables.deleteCard.bind(Observables));
 //on click of button functionality
 $('#github-login-button').on('click', this.addGitHubIdAsCard);
+// check enter key press on input box
+$('#github-login').keyup(function(event){
+	if(event.keyCode === 13){
+		this.addGitHubIdAsCard(event);
+	}
+}.bind(this));
