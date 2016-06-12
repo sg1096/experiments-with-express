@@ -143,6 +143,8 @@ function addGitHubIdAsCard(event){
 		$('#duplicate-id').css('display', 'block');
 		return;
 	}
+	//disable add button
+	$('#github-login-button').attr('disabled', true);
 	//set the display of loading to block to indicate the user
 	//data is being fetched
 	$('#loading').css('display', 'block');
@@ -158,6 +160,8 @@ function addGitHubIdAsCard(event){
         	userData = resp;
         	Observables.addCard(userData);
         	$('#loading').css('display', 'none');
+        	// enable add button
+        	$('#github-login-button').attr('disabled', false);
         	//on success clear the login button
         	$('#github-login').val('');
         }.bind(this),
@@ -165,6 +169,8 @@ function addGitHubIdAsCard(event){
         	$('#loading').css('display', 'none');
         	//on error also clear the login button
         	$('#github-login').val('');
+        	// enable add button
+        	$('#github-login-button').attr('disabled', false);
         	//display a generic error method if error occurs
         	$('#geenric-error').css('display', 'block');
         }
@@ -200,9 +206,16 @@ $('#github-login').on('focus', function(){
 });
 
 //bind function for sorting functionality
-$('body').delegate('#sort-by-name', 'click', Observables.sortByName.bind(Observables));
-$('body').delegate('#sort-by-followers', 'click', Observables.sortByFollowers.bind(Observables));
-$('body').delegate('#sort-by-location', 'click', Observables.sortByLocation.bind(Observables));
+$('body').delegate('.sort-attributes', 'click', function(event){
+	$('.sort-attributes').removeClass('active');
+	var elem = event.currentTarget,
+		sortFn = $(elem).data('sortfn'),
+		id = '#' + $(elem).attr('id');
+
+	$(id).addClass('active');
+	Observables[sortFn]().bind(Observables);
+});
+
 
 //on click of close icon delete the card
 $('body').delegate('.close-icon', 'click', Observables.deleteCard.bind(Observables));

@@ -108,9 +108,6 @@ img {
     max-width:100%;
 }
 
-
-
-
 .btn {
     height: 3em;
     background-image: linear-gradient(#6da4dd, #447bb0);
@@ -128,4 +125,12 @@ img {
     top : 10px;
     right : 10px;
     color : #000;
+}
+
+.sort-attributes:hover { 
+    color : blue;
+}
+
+.active {
+    color:red;
 }
