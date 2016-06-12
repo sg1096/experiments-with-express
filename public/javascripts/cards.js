@@ -134,7 +134,6 @@ var Observables = {
 };
 
 function addGitHubIdAsCard(event){
-	debugger;
 	var elem = event.currentTarget,
 		inputBox = $('#github-login'),
 		inputBoxValue = $(inputBox).val(),
@@ -184,7 +183,6 @@ Observables.addSubscriber('delete', function(loginId){
 });
 
 Observables.addSubscriber('sort', function(hbObjectsArr){
-	debugger;
 	var cardTemplate = Handlebars.templates['card'],
 		htmlString="";
 	hbObjectsArr.forEach(function(obj){
@@ -193,9 +191,6 @@ Observables.addSubscriber('sort', function(hbObjectsArr){
 	//adding html string to user cards element
 	$('#user-cards').html(htmlString);
 });	
-
-
-
 
 
 $('#github-login').on('focus', function(){
